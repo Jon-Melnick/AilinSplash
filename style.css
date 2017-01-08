@@ -42,6 +42,53 @@ body{
 
 
 
+
+
+
+/*Shop Page*/
+
+#shop-page{
+  display: flex;
+  text-align: center;
+  flex-flow: column;
+}
+
+
+/*Green Goddess Ring Page*/
+
+#ggr-page{
+  display: flex;
+  flex-flow: row;
+  align-content: space-between;
+}
+
+.left{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border: 1px solid black;
+  width: 50%;
+}
+
+.right{
+  padding-left: 30px;
+  display: flex;
+  flex-flow: column;
+  border: 1px solid black;
+  width: 50%;
+}
+
+
+
+/*development*/
+.shop-image{
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+
+
 /*#splash{
   border: 1px solid black;
   height: 500px;
