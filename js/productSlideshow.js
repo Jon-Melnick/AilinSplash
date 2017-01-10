@@ -1,13 +1,14 @@
 'use strict'
 
-const IMAGES = ["Tourmaline-Ring-Angle-View-1-V2", "Tourmaline-Ring-Angle-View-2", "Tourmaline-Ring-Front-View", "Tourmaline-Ring-Thru-Finger-View-1-V2", "Tourmaline-Ring-Thru-Finger-View-2-V2"]
+const IMAGES = ["Tourmaline-Ring-Angle-View-1-V2.jpg", "Tourmaline-Ring-Angle-View-2.jpg", "Tourmaline-Ring-Front-View.jpg", "Tourmaline-Ring-Thru-Finger-View-1-V2.jpg", "Tourmaline-Ring-Thru-Finger-View-2-V2.jpg"]
 
 let img = 0;
+let ring, interv;
+
 
 function changeImage() {
   increment();
-  let ring = document.getElementById('ring')
-  ring.src = `img/${IMAGES[img]}.jpg`;
+  ring.src = `img/${IMAGES[img]}`;
 }
 
 function increment(){
@@ -15,20 +16,26 @@ function increment(){
 }
 
 function timer() {
-  setInterval(changeImage, 3000);
+  interv = setInterval(changeImage, 3000);
 }
 
-function enter(){
-
+function changeSlideImage(i) {
+  ring.src = i.src;
+  let x = i.src.split('/');
+  img = IMAGES.indexOf(x[x.length-1]);
+  clearInterval(interv);
+  timer();
 }
 
-function leave() {
-
+function addClickListen() {
+  let images = document.getElementsByClassName('product-images')
+  for(let i of images){
+    i.addEventListener('click', ()=>changeSlideImage(i))
+  }
 }
 
 function begin() {
+  addClickListen()
   timer();
-  let ring = document.getElementById('ring');
-  ring.addEventListener('mouseenter', enter)
-  ring.addEventListener('mouseleave', leave)
+  ring = document.getElementById('ring')
 }
