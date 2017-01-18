@@ -1,6 +1,6 @@
 'use strict'
 
-const IMAGES = ["Tourmaline-Ring-Angle-View-1-V2", "Tourmaline-Ring-Angle-View-2", "Tourmaline-Ring-Front-View", "Tourmaline-Ring-Thru-Finger-View-1-V2", "Tourmaline-Ring-Thru-Finger-View-2-V2"]
+const IMAGES = ["Tourmaline-Ring-Front-View", "Tourmaline-Ring-Angle-View-1-V2", "Tourmaline-Ring-Angle-View-2", "Tourmaline-Ring-Thru-Finger-View-1-V2", "Tourmaline-Ring-Thru-Finger-View-2-V2"]
 
 let img = 0;
 
