@@ -1,6 +1,6 @@
 'use strict'
 
-const IMAGES = ["Tourmaline-Ring-Front-View.jpg", "Tourmaline-Ring-Angle-View-1-V2.jpg", "Tourmaline-Ring-Angle-View-2.jpg", "Tourmaline-Ring-Thru-Finger-View-1-V2.jpg", "Tourmaline-Ring-Thru-Finger-View-2-V2.jpg"]
+const IMAGES = ["Tourmaline-Ring-Angle-View-1-V2.jpg", "Tourmaline-Ring-Front-View.jpg", "Tourmaline-Ring-Angle-View-2.jpg", "Tourmaline-Ring-Thru-Finger-View-1-V2.jpg", "Tourmaline-Ring-Thru-Finger-View-2-V2.jpg"]
 
 let img = 0;
 let ring, interv;
