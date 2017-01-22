@@ -102,6 +102,7 @@ footer{
   flex-flow: row;
   justify-content:space-around;
   flex-wrap: wrap;
+  max-width: 1400px;
 }
 
 .commish-piece{
