@@ -30,7 +30,7 @@ body{
 }
 
 #ring{
-  width: 500px;
+  width: 700px;
 }
 
 #links{
@@ -194,7 +194,7 @@ hr{
 }
 
 .product-images {
-  width: 150px;
+  width: 200px;
   cursor: pointer;
   /*border: 1px solid black;*/
 }
