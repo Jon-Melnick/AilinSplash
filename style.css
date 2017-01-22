@@ -92,22 +92,23 @@ footer{
 }
 
 #one-of-a-kind{
-  margin: 35px 0;
+  margin: 35px 0 80px;
+
 }
 
 #commish{
   margin: 0 auto;
-  width: 80%;
+  /*width: 80%;*/
   display: flex;
   flex-flow: row;
-  justify-content:space-around;
+  justify-content:center;
   flex-wrap: wrap;
   max-width: 1400px;
 }
 
 .commish-piece{
   margin-bottom: 65px;
-  width: 350px;
+  width: 450px;
   text-align: center;
 }
 
