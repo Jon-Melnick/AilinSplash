@@ -4,9 +4,30 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script src="js/indexSlideshow.js"></script>
+    <script src="js/modal.js"></script>
     <title>Ailin Richards</title>
   </head>
   <body>
+
+    <div id="modal">
+      <div id="modal-bg" onclick="hideModal()">
+
+      </div>
+
+      <div id="modal-fg">
+        <h2>Contact</h2>
+        <form>
+          <input placeholder="email"/>
+          <br />
+          <input placeholder="subject"/>
+          <br />
+          <textarea placeholder="message"></textarea>
+          <div id="submit-contact" class="buy-button" onclick="hideModal()">click me</div>
+        </form>
+      </div>
+    </div>
+
+    <div class="body">
 
     <span id="title" ><a href='index.html'><img src='img/Logo.jpg'/></a></span>
 
@@ -16,7 +37,7 @@
 
     <div id="links">
       <a href='shop.html'><h2>SHOP</h2></a>
-      <h2>CONTACT</h2>
+      <h2 onclick="showModal()">CONTACT</h2>
     </div>
 
     <div id="social-bar">
@@ -45,6 +66,7 @@
         <small>website by JMelnick web design</small>
       </p>
     </footer>
+    </div>
   </body>
 
   <script>
