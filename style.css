@@ -301,13 +301,20 @@ hr{
 .form-inner-group{
   display: flex;
   flex-flow: column;
+  width: 45%;
 }
 
 .form-message-group{
   display: flex;
   flex-flow: column;
-  align-items: flex-start;
-  height: 50%;
+  justify-content: space-between;
+  height: 60%;
+}
+
+.form-inner-message-group{
+  display: flex;
+  flex-flow: column;
+  width: 100%;
 }
 
 #submit-contact{
