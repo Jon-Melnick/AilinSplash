@@ -52,6 +52,10 @@ body{
   text-decoration: none;
 }
 
+.link{
+  cursor: pointer;
+}
+
 a:link {color:#000;}      /* unvisited link */
 a:visited {color:#000;}  /* visited link */
 a:hover {color:#000;}  /* mouse over link */
@@ -276,6 +280,41 @@ hr{
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   transition: all 1s;
+}
+
+#contact-form{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.form-group{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-inner-group{
+  display: flex;
+  flex-flow: column;
+}
+
+.form-message-group{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  height: 50%;
+}
+
+#submit-contact{
+  text-align: center;
+  justify-content: center;
+  line-height: 40px;
+  align-self: center;
 }
 
 

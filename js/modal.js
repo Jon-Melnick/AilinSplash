@@ -4,7 +4,7 @@
     this.modalFG = document.getElementById('modal-fg')
 }
 
-function hideModal() {
+function hideModal(e) {
   let modalFG = document.getElementById('modal-fg')
   let modalBG = document.getElementById('modal-bg')
   setTimeout(()=>{this.modal.style.display = 'none'}, 800)

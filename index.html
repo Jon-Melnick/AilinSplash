@@ -16,13 +16,50 @@
 
       <div id="modal-fg">
         <h2>Contact</h2>
-        <form>
-          <input placeholder="email"/>
-          <br />
-          <input placeholder="subject"/>
-          <br />
-          <textarea placeholder="message"></textarea>
-          <div id="submit-contact" class="buy-button" onclick="hideModal()">click me</div>
+        <form id="contact-form">
+          <div class='form-group'>
+            <div class="form-inner-group">
+
+              <label>First Name</label>
+              <input/>
+            </div>
+
+            <div class="form-inner-group">
+
+              <label>Last Name</label>
+              <input/>
+
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class="form-inner-group">
+
+              <label>Email</label>
+              <input/>
+            </div>
+
+            <div class="form-inner-group">
+
+              <label>Phone</label>
+              <input/>
+
+            </div>
+          </div>
+
+          <div class='form-message-group'>
+            <div class="form-inner-group">
+
+              <label>Subject</label>
+              <input cols="50"/>
+            </div>
+
+            <div class="form-inner-group">
+              <textarea placeholder="message" rows="8" cols="50"></textarea>
+            </div>
+            <div id="submit-contact" class="buy-button" onclick="hideModal()">submit</div>
+          </div>
+
         </form>
       </div>
     </div>
@@ -37,7 +74,7 @@
 
     <div id="links">
       <a href='shop.html'><h2>SHOP</h2></a>
-      <h2 onclick="showModal()">CONTACT</h2>
+      <h2 onclick="showModal()" class="link">CONTACT</h2>
     </div>
 
     <div id="social-bar">
