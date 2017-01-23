@@ -289,6 +289,7 @@ hr{
   align-content: center;
   flex-flow: column;
   justify-content: space-around;
+  font-size: 13px;
 }
 
 .form-group{
@@ -317,11 +318,25 @@ hr{
   width: 100%;
 }
 
+textarea{
+  resize: none;
+}
+
+label{
+  font-size: 10px;
+}
+
+#contact-form-title{
+    text-align: center;
+    margin-top: 27px;
+}
+
 #submit-contact{
   text-align: center;
   justify-content: center;
   line-height: 40px;
   align-self: center;
+  margin-top: 12px;
 }
 
 
