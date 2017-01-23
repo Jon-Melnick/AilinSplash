@@ -92,7 +92,7 @@ footer{
 }
 
 #one-of-a-kind{
-  margin: 35px 0 80px;
+  margin: 60px 0;
 
 }
 
@@ -141,6 +141,11 @@ hr{
 
 .product-desc{
   font-size: 16px;
+  text-transform: none;
+  letter-spacing: .2em;
+}
+
+.test-prdes{
   text-transform: none;
   letter-spacing: .2em;
 }
@@ -216,6 +221,17 @@ hr{
   margin-bottom: 10px;
 }
 
+.test1{
+  margin-top: 10px;
+}
+
+.test2{
+  margin-bottom: 0;
+}
+
+#testPrice{
+  margin: 0;
+}
 
 
 /*#splash{
