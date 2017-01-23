@@ -335,8 +335,38 @@ label{
   text-align: center;
   justify-content: center;
   line-height: 40px;
-  align-self: center;
+  /*align-self: center;*/
+  float: left;
   margin-top: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#close-modal{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.radio{
+  font-size: 10px;
+}
+
+.form-buttons{
+  display: flex;
+  justify-content: center;
+}
+
+#cancel-contact{
+  text-align: center;
+  justify-content: center;
+  line-height: 40px;
+  /*align-self: center;*/
+  float: left;
+  margin-top: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 

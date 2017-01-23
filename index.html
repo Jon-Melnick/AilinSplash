@@ -15,6 +15,7 @@
       </div>
 
       <div id="modal-fg">
+        <span id="close-modal" onclick="hideModal()">X</span>
         <form id="contact-form">
           <h2 id="contact-form-title">Contact</h2>
           <div class='form-group'>
@@ -53,9 +54,9 @@
 
             <br />
 
-            <input type="radio" name="contact" value="email" checked> Email
+            <input type="radio" name="contact" value="email" checked> <span class="radio">email</span>
 
-            <input type="radio" name="contact" value="phone"> phone
+            <input type="radio" name="contact" value="phone"> <span class="radio">phone</span>
 
           </div>
 
@@ -70,7 +71,10 @@
               <label>Message</label>
               <textarea rows="8" cols="50"></textarea>
             </div>
-            <div id="submit-contact" class="buy-button" onclick="hideModal()">submit</div>
+            <div class="form-buttons">
+              <div id="submit-contact" class="buy-button" onclick="hideModal()">submit</div>
+              <div id="cancel-contact" class="buy-button" onclick="hideModal()">cancel</div>
+            </div>
           <!-- </div> -->
 
         </form>
