@@ -222,15 +222,17 @@ hr{
 }
 
 .test1{
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 .test2{
   margin-bottom: 0;
+  margin-top: 7px;
 }
 
 #testPrice{
   margin: 0;
+  font-size: 14px;
 }
 
 
