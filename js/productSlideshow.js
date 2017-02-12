@@ -27,6 +27,12 @@ function changeSlideImage(i) {
   timer();
 }
 
+function move(x){
+  console.log(x);
+  let bar = document.getElementById('slide-bar');
+bar.animate({ scrollLeft: x }, "slow")
+}
+
 function addClickListen() {
   let images = document.getElementsByClassName('product-images')
   for(let i of images){
