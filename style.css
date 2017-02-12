@@ -300,7 +300,11 @@ hr{
 
 .test2{
   margin-bottom: 0;
-  margin-top: 7px;
+  margin-top: 15px;
+}
+
+#product-title{
+  margin-bottom: 10px;
 }
 
 #testPrice{
