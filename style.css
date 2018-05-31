@@ -97,6 +97,7 @@ footer{
 #shop-page{
   display: flex;
   text-align: center;
+  align-items: center;
   flex-flow: column;
   letter-spacing: .3em;
 }
@@ -114,6 +115,14 @@ footer{
   justify-content:center;
   flex-wrap: wrap;
   max-width: 1400px;
+}
+
+.commission-content {
+  width: 80%;
+}
+
+.commission-content .link {
+  /* backgroundcolor: blue; */
 }
 
 .commish-piece{
@@ -167,7 +176,7 @@ hr{
 .product-desc-title br{
   margin-bottom: 20px;
 }
-
+.commission-content .link,
 .buy-button {
     height: 40px;
     /*line-height: 40px;*/
@@ -223,11 +232,16 @@ hr{
   /*flex-flow: row;*/
   /*justify-content: center;*/
   /*align-items: center;*/
+  display: flex;
   position: relative;
   min-width: 200px;
   max-width: 70%;
   max-height: 150px;
-  overflow: scroll;
+  overflow-x: scroll;
+}
+
+.product-thumbs .product-images {
+  display: inline-block;
 }
 
 /*.pi1{

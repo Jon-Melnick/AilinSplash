@@ -4,14 +4,108 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script src="js/indexSlideshow.js"></script>
+    <script src="js/modal.js"></script>
     <title>Ailin Richards</title>
   </head>
   <body>
-    <div class="body">
 
-    <content id="shop-page">
+    <div id="modal">
+      <div id="modal-bg" onclick="hideModal()">
+
+      </div>
+
+      <div id="modal-fg">
+        <span id="close-modal" onclick="hideModal()">X</span>
+        <form
+          id="contact-form">
+
+          <!-- <input
+            type="hidden"
+            name="access_token"
+            value="pttdb7vwhollbv6v37r45gqt" /> -->
+          <!-- <input
+            type="hidden"
+            name="success_url"
+            value=".?message=Email+Successfully+Sent%21&isError=0" /> -->
+          <!-- <input
+            type="hidden"
+            name="error_url"
+            value=".?message=Email+could+not+be+sent.&isError=1" /> -->
+
+
+          <h2 id="contact-form-title">Contact</h2>
+          <div class='form-group'>
+            <div class="form-inner-group">
+
+              <label>First Name</label>
+              <input type="text" name="extra_first_name"/>
+            </div>
+
+            <div class="form-inner-group">
+
+              <label>Last Name</label>
+              <input type="text" name="extra_last_name"/>
+
+
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class="form-inner-group">
+
+              <label>Email</label>
+              <input type='text' name="extra_email"/>
+
+            </div>
+
+            <div class="form-inner-group">
+
+              <label>Phone</label>
+              <input type="text" name="extra_phone"/>
+
+
+            </div>
+          </div>
+
+          <div>
+
+            <label>Preferred method of contact</label>
+
+            <br />
+
+            <input type="radio" name="extra_contact" value="email"> <span class="radio">email</span>
+
+            <input type="radio" name="extra_contact" value="phone"> <span class="radio">phone</span>
+
+          </div>
+
+          <!-- <div class='form-message-group'> -->
+            <div class="form-inner-message-group">
+
+              <label>Subject</label>
+              <input cols="50" name="subject" id="email-subject"/>
+            </div>
+
+            <div class="form-inner-message-group">
+              <label>Message</label>
+              <textarea rows="8" cols="50" name="text"></textarea>
+            </div>
+            <div class="form-buttons">
+              <button id="submit-contact" class="buy-button" type='submit'>submit</button>
+              <div id="cancel-contact" class="buy-button" onclick="hideModal()">cancel</div>
+            </div>
+          <!-- </div> -->
+
+        </form>
+      </div>
+    </div>
+
+    <div class="body">
       <span id="title" ><a href='index.html'><img src='img/Logo.jpg'/></a></span>
       <hr/>
+    <content id="shop-page">
+      <!-- <span id="title" ><a href='index.html'><img src='img/Logo.jpg'/></a></span>
+      <hr/> -->
 
       <div id='one-of-a-kind'>
 
@@ -32,8 +126,17 @@
       <div>
 
         <h2>Commissions</h2>
+        <content class="commission-content">
+            I specialize in designing unique, one-of-a-kind pieces of jewelry with my signature raw/luxe aesthetic using ethical, traceable materials - 18kt fairmined yellow gold, 18kt recycled white or rose gold, recycled platinum, reclaimed diamonds, and beautiful raw gemstones in their naturally occurring crystal forms, obtained from child labor free mines.
+            <br/>
+            <br/>
+            I currently have a variety of raw gemstones available to create commissioned pieces, and many more available to order. If you would like to commission a truly special one-of-a-kind piece of ethical jewelry or inquire about the process, please contact me through the link below.
 
-        <div id="commish">
+            <div>
+              <button onclick="showModal()" class="link">CONTACT</h2>
+            </div>
+        </content>
+        <!-- <div id="commish">
           <div class="commish-piece">
             <img class="shop-image" src='img/Tourmaline-Ring-Angle-View-1-V2.jpg'/>
             <h4 class='piece-title'>bicolor tourmaline</h4>
@@ -79,7 +182,7 @@
             <h4 class='piece-title'>bicolor tourmaline</h4>
             <h5 class="commish-price"><small>available for commissioned design</small></h5>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
@@ -95,4 +198,84 @@
     </footer>
   </div>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", begin);
+
+    var form_id_js = "contact-form";
+
+    var data_js = {
+        "access_token": "pttdb7vwhollbv6v37r45gqt" // sent after you sign up
+    };
+
+    function js_onSuccess() {
+      console.log('success');
+        // remove this to avoid redirect
+        // window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+    }
+
+    function js_onError(error) {
+      console.log(error);
+        // remove this to avoid redirect
+        // window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+    }
+
+    var sendButton = document.getElementById("submit-contact");
+
+    function js_send() {
+        console.log(sendButton);
+        sendButton.textContent='Sending…';
+        sendButton.disabled=true;
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+                js_onSuccess();
+            } else
+            if(request.readyState == 4) {
+                js_onError(request.response);
+            }
+        };
+
+        let contact = '/n Name: '+document
+          .querySelector("#" + form_id_js + " [name='extra_first_name']")
+          .value +' '+document
+          .querySelector("#" + form_id_js + " [name='extra_last_name']")
+          .value +"/n E-Mail: "+document
+          .querySelector("#" + form_id_js + " [name='extra_email']")
+          .value +"/n Phone: "+document
+          .querySelector("#" + form_id_js + " [name='extra_phone']")
+          .value +"/n Contact: "+document
+          .querySelector("#" + form_id_js + " [name='extra_contact']")
+          .value
+
+        var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
+        var message = document.querySelector("#" + form_id_js + " [name='text']").value + contact;
+        data_js['subject'] = subject;
+        data_js['text'] = message;
+        var params = toParams(data_js);
+
+        request.open("POST", "https://postmail.invotes.com/send", true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        request.send(params);
+
+        return false;
+    }
+
+    sendButton.onclick = js_send;
+
+    function toParams(data_js) {
+        var form_data = [];
+        for ( var key in data_js ) {
+            form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+        }
+
+        return form_data.join("&");
+    }
+
+    var js_form = document.getElementById(form_id_js);
+    js_form.addEventListener("submit", function (e) {
+        e.preventDefault();
+    });
+  </script>
 </html>
